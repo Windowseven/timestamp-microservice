@@ -38,7 +38,7 @@ app.get(["/api", "/api/:date"], handleTimestamp);
 
 // Do not change code below this line
 
-const PORT = 8000;
+const PORT = process.env.PORT || 3000;
 const listener = app.listen(PORT, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });

@@ -13,7 +13,7 @@ npm install
 npm start
 ```
 
-The server listens on port `8000`. Restart it after code changes.
+The server listens on port `3000` (override with `PORT=xxxx npm start`). Restart it after code changes.
 
 ## Endpoints
 
@@ -24,13 +24,13 @@ The server listens on port `8000`. Restart it after code changes.
 | GET | `/` | Static landing page (`views/index.html`) |
 
 ```bash
-curl localhost:8000/api/2016-12-25
+curl localhost:3000/api/2016-12-25
 # {"unix":1482624000000,"utc":"Sun, 25 Dec 2016 00:00:00 GMT"}
 
-curl localhost:8000/api/1451001600000
+curl localhost:3000/api/1451001600000
 # {"unix":1451001600000,"utc":"Fri, 25 Dec 2015 00:00:00 GMT"}
 
-curl localhost:8000/api/this-is-not-a-date
+curl localhost:3000/api/this-is-not-a-date
 # {"error":"Invalid Date"}
 ```
 
